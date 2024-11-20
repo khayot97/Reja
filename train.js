@@ -11,44 +11,44 @@ function countLetters(world) {
     return letterCount;
 }
 
+// Callback 
 const world = "engineer";
 const result = countLetters(world);
 console.log(result);
 
-// console.log("Jack Ma maslahatlari");
-// const list = [
-//     "yaxshi talab boling", // 0-20 yoshgacha
-//     "togri boshliq tanglang va koproq hato qiling", // 20 - 30 tanlov
-//     "uziningizga ishlashingizni boshlang", // 30 - 40 harakat 
-//     "siz kuchli bolgan narsalarni  qiling", // 40 - 50 ishlash 
-//     "yoshlarga investitsiya qiling", // 50 - 60 farzandlarga
-//     "endi dam oling, foydasi yoq endi", // 60 
-// ];
+console.log("Jack Ma maslahatlari");
+const list = [
+    "yaxshi talab boling", // 0-20 yoshgacha
+    "togri boshliq tanglang va koproq hato qiling", // 20 - 30 tanlov
+    "uziningizga ishlashingizni boshlang", // 30 - 40 harakat 
+    "siz kuchli bolgan narsalarni  qiling", // 40 - 50 ishlash 
+    "yoshlarga investitsiya qiling", // 50 - 60 farzandlarga
+    "endi dam oling, foydasi yoq endi", // 60 
+];
 
-// // CALLBACK function
-// function maslahatBering(a, callback) {
-//     if(typeof a !== "number") callback("insert a number", null);
-//     else if(a <= 20) callback(null, list[0]);
-//     else if(a > 20 && a <= 30) callback(null, list[1]);
-//     else if(a > 30 && a <= 40) callback(null, list[2]);
-//     else if(a > 40 && a <= 50) callback(null, list[3]);
-//     else if(a > 50 && a <= 60) callback(null, list[4]);
-//     else if(a > 20 && a <= 30) callback(null, list[5]);
-//     else {
-//         setInterval(function () {
-//             callback(null, list[5]);
-//         }, 1000);
-//     }   
-// }
+// CALLBACK function
+function maslahatBering(a, callback) {
+    if(typeof a !== "number") callback("insert a number", null);
+    else if(a <= 20) callback(null, list[0]);
+    else if(a > 20 && a <= 30) callback(null, list[1]);
+    else if(a > 30 && a <= 40) callback(null, list[2]);
+    else if(a > 40 && a <= 50) callback(null, list[3]);
+    else if(a > 50 && a <= 60) callback(null, list[4]);
+    else {
+        setInterval(function () {
+            callback(null, list[5]);
+        }, 1000);
+    }   
+}
 
-// console.log("paasd here 0");
-// maslahatBering(70, (err, data) => {
-//     if (err) console.log("ERROR:", err);
-//     else {
-//         console.log(data);
-//     }
-// });
-// console.log("passed here 1");
+console.log("paasd here 0");
+maslahatBering(70, (err, data) => {
+    if (err) console.log("ERROR:", err);
+    else {
+        console.log(data);
+    }
+});
+console.log("passed here 1");
 
 // ASYNC function
 // async function maslahatBering(a) {
