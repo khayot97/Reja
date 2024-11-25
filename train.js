@@ -1,14 +1,157 @@
+// Task - C
+// step - 1 shop classi 
+class Shop {
+    constructor(non, lagmon, cola) {
+        this.products = {
+            non: non, // non miqdori 4ta
+            lagmon:lagmon, // lagmon miqdori 5ta
+            cola: cola, // cola miqdroi 2 ta
+        };
+        // console.log("step 1");
+    }
+
+// step - 2 qoldiqni korsatish 
+qoldiq() {
+    const now = new Date().toLocaleTimeString();  // hozirgi vaqtni olamiz
+    console.log(
+      `Hozir ${now}da ${this.products.non}ta non, ${this.products.lagmon}ta lagmon va ${this.products.cola}ta cola mavjud`
+    );
+    // console.log("step 2");
+}
+
+// step 3 sotish producti 
+sotish(product, quantity) {
+    const now = new Date().toLocaleTimeString(); // hozirgi vaqtni olamiz
+    if (this.products[product] >= quantity) { // tekshiradi
+        // ["non"] >= 3(quantity) true  sotilishi mumkin chunku non 4 ta bor 
+        // agar non ["non"] >= 5 false bolsa zaxira yetarli bolmedi
+        this.products[product] -= quantity; // mahsulot miqdorini kamaytirish // kamytiradi
+        console.log(
+            `Hozir ${now}da ${product}da  ${quantity}ta ${product} sotildi`);
+    } else {
+        console.log(
+            `Hozir ${now}da ${product} zaxirasi yetarli emas! Faqat ${this.products[product]}ta mavjud`
+        );
+    } 
+    // console.log("step 3");      
+}
+
+// step - 4 qabul qilish
+qabul(product, quantity) {
+    const now = new Date().toLocaleTimeString(); // hozirgi vaqtni olamiz
+    this.products[product] += quantity; // mahsulot miqdorini oshirish // oshiradi
+    console.log(
+    `Hozir ${now}da ${quantity}ta ${product} qabul qilindi`);
+}
+
+}
+
+// step -5 yakuniy
+const shop = new Shop(4, 5, 2);
+// 4 dona non bor, 3 donani soatmiz
+shop.sotish("non", 3); // 3 ta non sotildi. 
+// 4 dona cola qoshamiz
+shop.qabul("cola", 4) // 4 ta cola qabul qilindi.
+// yakuniy holat
+shop.qoldiq(); // hozir 1 ta non, 5 ta lagmon va 6 ta cola mavjud!
+// console.log("step 5");  
+
+
+
+
+
+
+
+// vaqit bilan ishlash hozirgi vaqtni olib beradi
+// const now = new Date();
+// console.log(now.toLocaleTimeString(),"KOREA formati");
+// console.log(now.toLocaleTimeString("ru-RU"),"ROSSIA formati");
+// console.log(now.toLocaleTimeString("en-US"),"AQSH formati");
+// console.log(
+//     now.toLocaleTimeString("en-GB", {hour: "2-digit", minute: "2-digit"}));
+
+////////////////////////////////////////////////////////////////////////////////
+
+// for example for callback
+// function qoldiqBolish(a, b, callback) {
+//     if (b === 0) {
+//         console.log("step-1");
+//         callback("Mahraj nolga teng bolmasin!", null);
+//     } else {
+//         const c = a % b;
+//         callback(null, c);
+//         console.log("step-2");
+//     }
+// }
+
+
+// qoldiqBolish(10, 7, (err, data) => {
+//     if(err) {
+//         console.log('ERROR:', err);
+//         console.log("step-3");
+//     } else {
+//         console.log("data:", data);
+//         console.log("ANY LOGIC>>>>>>");
+//         console.log("step-4");
+//     }
+// });
+
+// for examle promise
+
+// function fetchData() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const data = { name: "Ali", age: 25 };
+//             resolve(data);
+//             console.log("step: 1");
+//         }, 2000);
+//     });
+// }
+
+// fetchData()
+// .then((data) => {
+//     console.log("Yuklangan malumotlar:", data);
+//     console.log("step: 2");
+// })
+// .catch((err) => {
+//     console.log("xatolik:", error);
+//     console.log("step: 3");
+// });
+
+// for example async
+// function fetchData() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const data = { name: "Ali", age: 25 };
+//             resolve(data);
+//             console.log("step: 1");
+//         }, 2000);
+//     });
+// }
+
+// async function getUserData() {
+//     console.log("Malumotlarni yuklash boshlanmoqda....:");
+//     console.log("step: 2");
+
+
+
+//   const data = await fetchData();
+//   console.log("Yuklangan malumotlar:", data);
+//   console.log("step: 3");
+// }
+
+// getUserData();
 
 // B - Task 
-function countDigits(numberQidir) { 
-    // string ichida faqat numberlarni qidiramiz!
-    const numbers = numberQidir.match(/\d/g); // regex (/\d/g) \d/9 har bir raqamni 0-9 bildiradi g flag esa 
-    // hamma mos keluvchi rqamani qidradi!
-    // agar raqamlar topilsa ularning uzunligini qaytaramiz, aks holda 0 qaytaramiz!
-    return numbers ? numbers.length : 0;
-}
-// funksiyani ishlatamiz!  
-console.log(countDigits("ad2a54y79wet0sfgb9")); // 7
+// function countDigits(numberQidir) { 
+//     // string ichida  faqat numberlarni qidiramiz!
+//     const numbers = numberQidir.match(/\d/g); // regex (/\d/g) \d/9 har bir raqamni 0-9 bildiradi g flag esa 
+//     // hamma mos keluvchi rqamani qidradi!
+//     // agar raqamlar topilsa ularning uzunligini qaytaramiz, aks holda 0 qaytaramiz!
+//     return numbers ? numbers.length : 0;
+// }
+// // funksiyani ishlatamiz!  
+// console.log(countDigits("ad2a54y79wet0sfgb9")); // 7
 // console.log(countDigits("abcd")); // 0
 // console.log(countDigits("12345")); // 5
 
