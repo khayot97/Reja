@@ -17,26 +17,25 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
 // MongoDB chaqirish
 const db = require("./server").db();
 const mongodb = require("mongodb");
-// 1: Kirish codelar
 
+// 1: Kirish code
 app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// 2: Session codelar
+// 2: Session code
 
-// 3: View codelar
+
+
+// 3: View code
 app.set("views", "views");
 app.set("view engine", "ejs");
 
-
 // 4: Routing code
 app.post("/create-item", (req, res) => {
-    // console.log(req.body);
     console.log('user entered /create-item');
     const new_reja = req.body.reja;
     db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-      // console.log(data.ops);
        res.json(data.ops[0]);
     }); 
 });

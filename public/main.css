@@ -18,7 +18,6 @@
     align-items: center;
     margin-top: 2px;
     background: #f7f6b9;
-    /* background: #e5e5e5; */
 }
 
 .main_frame .left_frame {
@@ -116,7 +115,6 @@
     height: 153px;
     margin-top: 25px;
     margin-left: 45px;
-    /* background-color: aqua; */
 }
 
 .main_frame .left_frame .left_1-3 {
@@ -147,21 +145,15 @@
     margin-top: 20px;
 }
 /* finish */
+
 /* link_ href / step 2 */
 .main_frame .left_frame .link_href {
     text-decoration: none;
     color: black;
 }
 
-/* .icon {
-    position: relative;
-    width: 24.99px;
-    height: 22.8px;
-    border-radius: 50%;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
-    background-color: #ffb400;
-} */
 /* finish */
+
 /* left_2 / step 3 */
 .main_frame .left_frame .left2_1 {
     position: relative;
@@ -180,7 +172,6 @@
     height: 24px;
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
     justify-content: center;
     background-color: #ffb400;
 }
@@ -209,7 +200,6 @@
     height: 24px;
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
     justify-content: center;
     background-color: #ffb400;
 }
@@ -220,7 +210,6 @@
     height: 24px;
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
     justify-content: center;
     background-color: #ffb400;
     }
@@ -231,7 +220,6 @@
     height: 24px;
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
     justify-content: center;
     background-color: #ffb400;
 }
@@ -246,6 +234,7 @@
     color: #7eb942;
 }
 /* finish */
+
 /* left_3 / step 3 */
 .main_frame .left_frame .languages {
     position: relative;
@@ -347,6 +336,7 @@
     margin-left: 1px;
 }
 /* finish */
+
 /* left_4 / step 4*/
 .main_frame .left_frame .left_4 .border {
     width: 220px;
@@ -437,6 +427,7 @@
     text-transform: capitalize;
 }
   /*finish  */
+
 /* left_5 / step 5 */
 .main_frame .left_frame .left_5 .extra {
     position: relative;
@@ -472,6 +463,7 @@
     color: #767676;
 }
 /* finish */
+
 /* middle / step 6 */
 .midd_frame .midd_top {
     position: relative;
@@ -885,7 +877,6 @@
     height: 252px;
     margin-top: 25px;
     margin-left: 45px;
-    /* background-color: aqua; */
 }
 
 .main_frame .left_frame .left_5{
@@ -894,7 +885,6 @@
     height: 148px;
     margin-top: 25px;
     margin-left: 45px;
-    /* background-color: aqua; */
 }
 
 .frame {

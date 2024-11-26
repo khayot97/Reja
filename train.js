@@ -1,5 +1,5 @@
 // Task - C
-// step - 1 shop classi 
+// step - 1 shop classe 
 class Shop {
     constructor(non, lagmon, cola) {
         this.products = {
@@ -19,7 +19,7 @@ qoldiq() {
     // console.log("step 2");
 }
 
-// step 3 sotish producti 
+// step 3 sotish product 
 sotish(product, quantity) {
     const now = new Date().toLocaleTimeString(); // hozirgi vaqtni olamiz
     if (this.products[product] >= quantity) { // tekshiradi
@@ -58,11 +58,8 @@ shop.qoldiq(); // hozir 1 ta non, 5 ta lagmon va 6 ta cola mavjud!
 
 
 
+// Vaqit bilan ishlash hozirgi vaqtni olib beradi
 
-
-
-
-// vaqit bilan ishlash hozirgi vaqtni olib beradi
 // const now = new Date();
 // console.log(now.toLocaleTimeString(),"KOREA formati");
 // console.log(now.toLocaleTimeString("ru-RU"),"ROSSIA formati");
@@ -70,9 +67,8 @@ shop.qoldiq(); // hozir 1 ta non, 5 ta lagmon va 6 ta cola mavjud!
 // console.log(
 //     now.toLocaleTimeString("en-GB", {hour: "2-digit", minute: "2-digit"}));
 
-////////////////////////////////////////////////////////////////////////////////
+// For example for callback
 
-// for example for callback
 // function qoldiqBolish(a, b, callback) {
 //     if (b === 0) {
 //         console.log("step-1");
@@ -83,7 +79,6 @@ shop.qoldiq(); // hozir 1 ta non, 5 ta lagmon va 6 ta cola mavjud!
 //         console.log("step-2");
 //     }
 // }
-
 
 // qoldiqBolish(10, 7, (err, data) => {
 //     if(err) {
@@ -96,7 +91,7 @@ shop.qoldiq(); // hozir 1 ta non, 5 ta lagmon va 6 ta cola mavjud!
 //     }
 // });
 
-// for examle promise
+// For examle for promise
 
 // function fetchData() {
 //     return new Promise((resolve, reject) => {
@@ -118,7 +113,7 @@ shop.qoldiq(); // hozir 1 ta non, 5 ta lagmon va 6 ta cola mavjud!
 //     console.log("step: 3");
 // });
 
-// for example async
+// For example for async
 // function fetchData() {
 //     return new Promise((resolve, reject) => {
 //         setTimeout(() => {
@@ -155,8 +150,6 @@ shop.qoldiq(); // hozir 1 ta non, 5 ta lagmon va 6 ta cola mavjud!
 // console.log(countDigits("abcd")); // 0
 // console.log(countDigits("12345")); // 5
 
-/////////////////////////////////////////////////////////////////
-
 // // A - Task 
 // function countLetters(world) {
 //     const letterCount = {};
@@ -172,8 +165,6 @@ shop.qoldiq(); // hozir 1 ta non, 5 ta lagmon va 6 ta cola mavjud!
 // const world = "engineer";
 // const result = countLetters(world);
 // console.log(result);
-
-// ///////////////////////////////////////////////////////////// 
 
 // console.log("Jack Ma maslahatlari");
 // const list = [
