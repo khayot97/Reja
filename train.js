@@ -1,3 +1,21 @@
+// Task - D
+// define!
+function checkContent(str1, str2) {
+const string1 = str1.toLowerCase().split('').sort().join('');
+const string2 = str2.toLowerCase().split('').sort().join('');
+    return string1 === string2;
+}
+// tolowerCase bu kiritilgan katta hariflarni kichik harifga otkazib tekshirib beradi!
+// split bu har birb harifni alohida stringa qoyib beradi massiv!
+// sort kiritilgan sozni alfabit boyicha tartibga solib beradi!
+// join esa bizda qayat yana string qilib beradi!
+//  returnda esa ikkistringni solishtirb bermoqda va qaytarmoqda! 
+
+// call back! 
+const result = checkContent("mitgroup", "gmtiprou");
+console.log(result); // natija!
+ 
+/*
 // Task - C
 // step - 1 shop classe 
 class Shop {
@@ -54,7 +72,7 @@ shop.sotish("non", 3); // 3 ta non sotildi.
 shop.qabul("cola", 4) // 4 ta cola qabul qilindi.
 // yakuniy holat
 shop.qoldiq(); // hozir 1 ta non, 5 ta lagmon va 6 ta cola mavjud!
-// console.log("step 5");  
+// console.log("step 5");  */
 
 
 

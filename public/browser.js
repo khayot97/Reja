@@ -41,7 +41,6 @@ document.getElementById("create-form")
 
 document.addEventListener("click", function(e) {
     // delet oper
-    // console.log(e.target);
     if(e.target.classList.contains("delete-me")) {
         if(confirm("Aniq o'chirmoqchimisiz?")) {
             axios
