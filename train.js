@@ -1,3 +1,16 @@
+// Task - E
+function getReverse(str1)  {
+    return str1.split('').reverse().join(''); 
+    // const string1 = str1.split('').reverse().join(''); 
+    // return string1;
+}
+// split bu har birb harifni alohida stringa qoyib beradi massiv!
+// reverse massivni teskari tarkibga ozgartiradi!
+// join esa bizda qayat yana string qilib beradi!
+const result = getReverse("hello");
+console.log("result:", result);
+
+/*
 // Task - D
 // define!
 function checkContent(str1, str2) {
@@ -15,7 +28,7 @@ const string2 = str2.toLowerCase().split('').sort().join('');
 const result = checkContent("mitgroup", "gmtiprou");
 console.log(result); // natija!
  
-/*
+
 // Task - C
 // step - 1 shop classe 
 class Shop {

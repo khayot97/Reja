@@ -25,8 +25,6 @@ app.use(express.urlencoded({ extended: true }));
 
 // 2: Session code
 
-
-
 // 3: View code
 app.set("views", "views");
 app.set("view engine", "ejs");
@@ -61,7 +59,6 @@ app.post("/edit-item", (req, res) => {
    );
 });
 
-
 app.post("/delete-item", (req, res) => {
   const id = req.body.id;
   db.collection("plans").deleteOne(
@@ -71,7 +68,6 @@ app.post("/delete-item", (req, res) => {
     }
   );
 });
-
 
 app.post("/edit-item", (req, res) => {
   const data = req.body;
@@ -96,7 +92,6 @@ app.post("/delete-all", (req, res) => {
 app.get("/author", (req, res) => {
   res.render("author", { user: user });
 });
-
 
 app.post("/delete-all" , (req, res) => {
   if(req.body.delete_all) {
