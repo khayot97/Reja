@@ -4,6 +4,7 @@ function getReverse(str1)  {
     // const string1 = str1.split('').reverse().join(''); 
     // return string1;
 }
+
 // split bu har birb harifni alohida stringa qoyib beradi massiv!
 // reverse massivni teskari tarkibga ozgartiradi!
 // join esa bizda qayat yana string qilib beradi!
