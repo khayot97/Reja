@@ -2,6 +2,9 @@ console.log("Web Serverni boshlash");
 const { log } = require("console");
 const express = require("express");
 const app = express();
+ // app obejct  bilan backend sereverini qurolamiz uning proportiylari orqali! 
+ // state & mathed 
+ // bular use & set & post methodlar 
 
 const fs = require("fs");
 
@@ -15,7 +18,8 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
 });
 
 // MongoDB chaqirish
-const db = require("./server").db();
+// db & app obejct bular bilan crud operlarni qilolasiz database bilan!
+const db = require("./server").db(); 
 const mongodb = require("mongodb");
 
 // 1: Kirish code
@@ -30,11 +34,18 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4: Routing code
+// axios kelyapti frontendan
+// STEP - 2 frontendan bcakendga kirib kealdi
+// bu post orqali malumot jonatganmiz req orqali bodydan olamiz
 app.post("/create-item", (req, res) => {
     console.log('user entered /create-item');
     const new_reja = req.body.reja;
+    // malumotlar bu yerga kelgan
+// STEP-3 backendan chiqb database boramiz create yaratimiz 
     db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
        res.json(data.ops[0]);
+// STEP-4 db qaytibkeldik backendga qoshilgan malumoni olib 
+// STEP-5 backendan frontendga malumot yuboradi
     }); 
 });
 

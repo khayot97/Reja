@@ -1,3 +1,41 @@
+// TASK - F
+
+// Yagona string argumentga ega findDoublers nomli function tuzing
+// Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa
+// true yokida false natija qaytarsin.
+
+// MASALAN: findDoublers("hello"); natija true qaytadi. Sababi ikki marotaba takrorlangan 'll' harfi mavjud!
+
+function findDoublers(str1) {
+    const string1 = str1.split('');
+    return string1.some((item, index) => string1.indexOf(item) !== index);
+}
+
+// split bizga hello array qilib bermoqda.
+// findDoublers mantiqdegi belgilarni tekshiradi true & false.
+// string1.some() ishlaydi.
+// Har bir element tekshiriladi.
+// "h":
+// string1.indexOf("h") → 0 (birinchi marta 0-indeksta uchraydi).
+// index → 0 (hozirgi indeks ham 0).
+// Shart: 0 !== 0 → false.
+// "e":
+// string1.indexOf("e") → 1 (birinchi marta 1-indeksta uchraydi).
+// index → 1.
+// Shart: 1 !== 1 → false.
+// "l" (birinchi "l"):
+// string1.indexOf("l") → 2 (birinchi marta 2-indeksta uchraydi).
+// index → 2.
+// Shart: 2 !== 2 → false.
+// "l" (ikkinchi "l"):
+// string1.indexOf("l") → 2 (birinchi marta 2-indeksta uchraydi).
+// index → 3.
+// Shart: 2 !== 3 → true. (Topildi!)
+// string1.some() metodi true qiymatini qaytaradi, chunki "l" takrorlangan.
+
+const result = findDoublers("hello")
+console.log("natija:", result);
+/*
 // Task - E
 function getReverse(str1)  {
     return str1.split('').reverse().join(''); 
@@ -11,7 +49,7 @@ function getReverse(str1)  {
 const result = getReverse("hello");
 console.log("result:", result);
 
-/*
+
 // Task - D
 // define!
 function checkContent(str1, str2) {

@@ -1,6 +1,6 @@
-const http = require("http");
+const http = require("http"); // core package uchun dependencine ichida korinmaydi bu nodejsni ozi bilan kealdi 
+const mongodb = require("mongodb"); // asosiy masqsadi database bilan connection amalga oshirish
 
-const mongodb = require("mongodb");
 let db;
 const connectionString = "mongodb+srv://khayotbek:emDqAos4g8lqk4hp@cluster0.uafjf.mongodb.net/Reja";
 
@@ -15,7 +15,7 @@ mongodb.connect(
     else {
       console.log("MongoDB connectin succed");
       module.exports = client;
-      const app = require("./app");
+      const app = require("./app"); // express orqali backend serevrimizi quryapmiz /app ichida
       const server = http.createServer(app);
       let PORT = process.env.PORT || 4006;
       server.listen(PORT, function () {
@@ -27,5 +27,5 @@ mongodb.connect(
   }
 );
 
-
+// backend apilarni ishlatish uchun kerak boladi
 
