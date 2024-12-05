@@ -1,3 +1,32 @@
+ // TASK G:
+
+// Yagona parametrga ega function tuzing.
+// Va bu function parametr orqalik integer ma'lumot turlariga ega bo'lgan bir arrayni qabul qilsin.
+// Ushbu function bizga arrayning tarkibidagi birinchi eng katta qiymatning indeksini qaytarsin.
+
+// MASALAN: getHighestIndex([5, 21, 12, 21 ,8]); return qiladi 1 sonini
+// Yuqoridagi misolda, birinchi indeksda 21 joylashgan.
+// Va bu 21 soni arrayning tarkibidagi birinchi eng katta son hisobladi va bizga uning indeksi 1 qaytadi.
+
+function getHighestIndex(num) {
+    let num1 = num[0]
+    let ind1 = 0;
+    // num1 qiymatlarni saqlab olyapti har bir aylanada!
+    // ind1 esa index raqamlarini  saqlab olyapti!
+
+    for (let i = 1; i < num .length; i++) {
+        if (num[i] > num1) {
+            num1 = num[i];
+            ind1 = i; // buyerda index saqlanadi!
+        } 
+    } 
+    console.log("num:", num1);
+    console.log("index:", ind1);
+}
+
+getHighestIndex([5, 21, 12, 21 ,8]); 
+
+/*
 // TASK - F
 
 // Yagona string argumentga ega findDoublers nomli function tuzing
@@ -35,7 +64,7 @@ function findDoublers(str1) {
 
 const result = findDoublers("hello")
 console.log("natija:", result);
-/*
+
 // Task - E
 function getReverse(str1)  {
     return str1.split('').reverse().join(''); 
